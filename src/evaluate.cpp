@@ -198,7 +198,7 @@ namespace {
 
   // KingDanger[attackUnits] contains the actual king danger weighted
   // scores, indexed by a calculated integer number.
-  Score KingDanger[499];
+  Score KingDanger[489];
 
   // apply_weight() weighs score 's' by weight 'w' trying to prevent overflow
   Score apply_weight(Score s, const Weight& w) {
