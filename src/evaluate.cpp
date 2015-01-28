@@ -100,7 +100,7 @@ namespace {
   // MobilityBonus[PieceType][attacked] contains bonuses for middle and end
   // game, indexed by piece type and number of attacked squares not occupied by
   // friendly pieces.
-  const Score MobilityBonus[][32] = {
+  const Score MobilityBonus[][33] = {
     {}, {},
     { S(-65,-50), S(-42,-30), S(-9,-10), S( 3,  0), S(15, 10), S(27, 20), // Knights
       S( 37, 28), S( 42, 31), S(44, 33) },
