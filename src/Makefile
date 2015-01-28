@@ -24,7 +24,7 @@
 UNAME = $(shell uname)
 
 ### Executable name
-EXE = stockfish
+EXE = stockfishmf
 
 ### Installation dir definitions
 PREFIX = /usr/local
@@ -452,7 +452,7 @@ gcc-profile-make:
 	all
 
 gcc-profile-use:
-# Deleting corrupt ucioption.gc* profile files is necessary to avoid an 
+# Deleting corrupt ucioption.gc* profile files is necessary to avoid an
 # "internal compiler error" for gcc versions 4.7.x
 	@rm -f ucioption.gc*
 	$(MAKE) ARCH=$(ARCH) COMP=$(COMP) \
