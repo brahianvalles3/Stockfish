@@ -91,7 +91,7 @@ namespace {
   // Evaluation weights, indexed by evaluation term
   enum { Mobility, PawnStructure, PassedPawns, Space, KingSafety };
   const struct Weight { int mg, eg; } Weights[] = {
-    {289, 344}, {233, 201}, {221, 273}, {46, 0}, {323, 0}
+    {289, 344}, {233, 201}, {221, 273}, {46, 0}, {322, 0}
   };
 
   #define V(v) Value(v)
@@ -560,7 +560,7 @@ namespace {
        & ~ei.attackedBy[Us][PAWN];
 
     if (b)
-        score += popcount<Max15>(b) * PawnAttackThreat;
+        score += popcount<Full>(b) * PawnAttackThreat;
 
     if (Trace)
         Tracing::write(Tracing::THREAT, Us, score);
